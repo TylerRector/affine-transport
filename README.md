@@ -2,6 +2,12 @@
 
 This project applies instance-adaptive learned compression to ray tracing, fitting a compact per-frame model to a ray-traced reference for roughly 10⁴× less compute.
 
+## Charts
+
+![model, oracle, difference for kitchen scenes](figures/compare_kitchen.png)
+
+Difference maps are scaled 0 → 0.1 in tone units.
+
 ## Benchmark
 
 Error is channelwise sMAPE against the oracle in tone space, `τ(x) = (x/(1+x))^(1/2.2)`. The operating point is 9.26% of tiles carrying an atom.
@@ -23,12 +29,6 @@ The transparent-layer stage does the heavy lifting and it does it cheaply: 73 KB
 Cornell is the harder scene and stalls higher. Its residual is chromatic. The fitted colour axis is (0.85, 0.45, 0.27), compared with the kitchen's near-grey (0.56, 0.58, 0.59), so a single shared axis cannot carry red and green wall bleed at once, and the shaded region only moves from 0.149 to 0.114. Per-tile colour, or two axes, is where the next byte should go.
 
 For reference, the kitchen dump's own hybrid encoder reached 0.0321 using 1.20 MB; this pipeline reaches 0.0309 at 220 KB.
-
-## Charts
-
-![model, oracle, difference for kitchen scenes](figures/compare_kitchen.png)
-
-Difference maps are scaled 0 → 0.1 in tone units.
 
 ## Spec
 
