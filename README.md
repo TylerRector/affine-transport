@@ -28,8 +28,6 @@ For reference, the kitchen dump's own hybrid encoder reached 0.0321 using 1.20 M
 
 ![model, oracle, difference for kitchen scenes](figures/compare_kitchen.png)
 
-![rate-distortion](figures/rate_distortion.png)
-
 Per-scene versions are `figures/compare_kitchen.png` and `figures/compare_cornell.png`. Difference maps are scaled 0 → 0.1 in tone units.
 
 ## Spec
