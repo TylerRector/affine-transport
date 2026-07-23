@@ -26,7 +26,7 @@ For reference, the kitchen dump's own hybrid encoder reached 0.0321 using 1.20 M
 
 ## Charts
 
-![model, oracle, difference for both scenes](figures/compare_both.png)
+![model, oracle, difference for kitchen scenes](figures/compare_kitchen.png)
 
 ![rate-distortion](figures/rate_distortion.png)
 
