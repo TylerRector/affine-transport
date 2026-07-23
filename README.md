@@ -1,6 +1,6 @@
 # affine-transport
 
-This project applies instance-adaptive learned compression to ray tracing, fitting a compact per-frame model to a ray-traced reference for roughly 10⁴× less compute. A rasterised base shading pass is turned into a path-traced frame by transmitting that payload. Wherever the shader wrote nothing, such as glass or unlit surfaces, the hole is inpainted from its boundary and each 4×4 tile over it gets one affine transport layer, `B ↦ emit + transmittance · (B ∘ warp)`, fitted against the oracle and stored as an fp16 scalar plus an fp16 RGB triple. Everywhere else the residual is projected onto one shared colour axis, quantised to sixteen signed 5-bit amplitudes per tile, and tiles are spent in order of their measured sMAPE gain until the atom budget runs out. Since every atom costs the same 12 bytes, the per-tile decision is independent of the rest of the frame. `spec/AffineTransport.lean` states the whole thing as runnable code. The same encoder runs unchanged on both scenes below.
+This project applies instance-adaptive learned compression to ray tracing, fitting a compact per-frame model to a ray-traced reference for roughly 10⁴× less compute.
 
 ## Benchmark
 
