@@ -1,0 +1,250 @@
+{
+  "metric": "mean(2*|p-r|/(|p|+|r|+1e-8)) on tone((x/(1+x))^(1/2.2))",
+  "ship_fraction": 0.0926,
+  "fractions": [
+    0.0,
+    0.005,
+    0.01,
+    0.02,
+    0.04,
+    0.0926,
+    0.1235,
+    0.2
+  ],
+  "scenes": [
+    {
+      "scene": "kitchen",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "megapixels": 2.0736,
+      "hole_fraction": 0.0630984760802469,
+      "tiles": 129600,
+      "layers": 9153,
+      "core_bytes": 73230,
+      "color_axis": [
+        0.56290541445966,
+        0.5765752770831383,
+        0.5921979772242564
+      ],
+      "encode_seconds": 7.836635589599609,
+      "baseline": {
+        "smape_full": 0.16950745681005747,
+        "smape_hole": 1.9999999594864004,
+        "smape_shaded": 0.04622738473592196,
+        "psnr_full_db": 12.589780676934183,
+        "bytes": 0
+      },
+      "rate_curve": [
+        {
+          "fraction": 0.0,
+          "atoms": 0,
+          "bytes": 73230,
+          "bytes_per_megapixel": 35315.39351851852,
+          "smape_full": 0.04448461046240128,
+          "smape_hole": 0.01860747405370105,
+          "smape_shaded": 0.04622738473592196,
+          "psnr_full_db": 31.362294528899692
+        },
+        {
+          "fraction": 0.005,
+          "atoms": 648,
+          "bytes": 81781,
+          "bytes_per_megapixel": 39439.13966049383,
+          "smape_full": 0.04232164606524409,
+          "smape_hole": 0.01632699767311159,
+          "smape_shaded": 0.04407233453986961,
+          "psnr_full_db": 32.06733987037508
+        },
+        {
+          "fraction": 0.01,
+          "atoms": 1296,
+          "bytes": 90170,
+          "bytes_per_megapixel": 43484.760802469136,
+          "smape_full": 0.04090426181485123,
+          "smape_hole": 0.014694644093897443,
+          "smape_shaded": 0.04266942805123326,
+          "psnr_full_db": 32.49295150308751
+        },
+        {
+          "fraction": 0.02,
+          "atoms": 2592,
+          "bytes": 106785,
+          "bytes_per_megapixel": 51497.395833333336,
+          "smape_full": 0.03879580645431293,
+          "smape_hole": 0.012132614659389834,
+          "smape_shaded": 0.040591520013040255,
+          "psnr_full_db": 33.298745102958364
+        },
+        {
+          "fraction": 0.04,
+          "atoms": 5184,
+          "bytes": 139691,
+          "bytes_per_megapixel": 67366.41589506173,
+          "smape_full": 0.03582411136749178,
+          "smape_hole": 0.008183509720972723,
+          "smape_shaded": 0.03768565155854594,
+          "psnr_full_db": 34.12453602975325
+        },
+        {
+          "fraction": 0.0926,
+          "atoms": 12001,
+          "bytes": 225268,
+          "bytes_per_megapixel": 108636.18827160494,
+          "smape_full": 0.030868017635872765,
+          "smape_hole": 0.004948735036315915,
+          "smape_shaded": 0.03261363037250589,
+          "psnr_full_db": 35.50032716702703
+        },
+        {
+          "fraction": 0.1235,
+          "atoms": 16006,
+          "bytes": 275330,
+          "bytes_per_megapixel": 132778.74228395062,
+          "smape_full": 0.028782441277861122,
+          "smape_hole": 0.00457934764215268,
+          "smape_shaded": 0.030412472061087305,
+          "psnr_full_db": 36.044707028053594
+        },
+        {
+          "fraction": 0.2,
+          "atoms": 25920,
+          "bytes": 398040,
+          "bytes_per_megapixel": 191956.01851851854,
+          "smape_full": 0.024723757189951134,
+          "smape_hole": 0.004266543138424246,
+          "smape_shaded": 0.026101510346012085,
+          "psnr_full_db": 37.045353460170254
+        }
+      ],
+      "shipped": {
+        "fraction": 0.0926,
+        "atoms": 12001,
+        "bytes": 225268,
+        "bytes_per_megapixel": 108636.18827160494,
+        "smape_full": 0.030868017635872765,
+        "smape_hole": 0.004948735036315915,
+        "smape_shaded": 0.03261363037250589,
+        "psnr_full_db": 35.50032716702703
+      }
+    },
+    {
+      "scene": "cornell",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "megapixels": 1.048576,
+      "hole_fraction": 0.11149311065673828,
+      "tiles": 65536,
+      "layers": 8143,
+      "core_bytes": 65150,
+      "color_axis": [
+        0.8495997281176242,
+        0.45189916573152944,
+        0.2719695681388027
+      ],
+      "encode_seconds": 3.9305901527404785,
+      "baseline": {
+        "smape_full": 0.22498292465033506,
+        "smape_hole": 0.8285589199934134,
+        "smape_shaded": 0.14924398998852573,
+        "psnr_full_db": 23.269271599325776,
+        "bytes": 0
+      },
+      "rate_curve": [
+        {
+          "fraction": 0.0,
+          "atoms": 0,
+          "bytes": 65150,
+          "bytes_per_megapixel": 62131.88171386719,
+          "smape_full": 0.13573252668923755,
+          "smape_hole": 0.028057459092577605,
+          "smape_shaded": 0.14924398998852573,
+          "psnr_full_db": 26.635794426087678
+        },
+        {
+          "fraction": 0.005,
+          "atoms": 328,
+          "bytes": 69478,
+          "bytes_per_megapixel": 66259.38415527344,
+          "smape_full": 0.131442124058787,
+          "smape_hole": 0.028056930917905544,
+          "smape_shaded": 0.14441527814163774,
+          "psnr_full_db": 26.794824856550584
+        },
+        {
+          "fraction": 0.01,
+          "atoms": 655,
+          "bytes": 73712,
+          "bytes_per_megapixel": 70297.2412109375,
+          "smape_full": 0.12835058328979623,
+          "smape_hole": 0.0280489603153734,
+          "smape_shaded": 0.14093679965284953,
+          "psnr_full_db": 26.942283226142585
+        },
+        {
+          "fraction": 0.02,
+          "atoms": 1311,
+          "bytes": 82122,
+          "bytes_per_megapixel": 78317.64221191406,
+          "smape_full": 0.1236201811604173,
+          "smape_hole": 0.02803920790158314,
+          "smape_shaded": 0.13561403304388753,
+          "psnr_full_db": 27.25383167306063
+        },
+        {
+          "fraction": 0.04,
+          "atoms": 2621,
+          "bytes": 98753,
+          "bytes_per_megapixel": 94178.1997680664,
+          "smape_full": 0.11615931225357794,
+          "smape_hole": 0.02802363115158611,
+          "smape_shaded": 0.127218901508057,
+          "psnr_full_db": 27.694981222142538
+        },
+        {
+          "fraction": 0.0926,
+          "atoms": 6069,
+          "bytes": 142037,
+          "bytes_per_megapixel": 135457.03887939453,
+          "smape_full": 0.10451567385079685,
+          "smape_hole": 0.02767902570366118,
+          "smape_shaded": 0.11415741891446604,
+          "psnr_full_db": 28.820087807211763
+        },
+        {
+          "fraction": 0.1235,
+          "atoms": 8094,
+          "bytes": 167349,
+          "bytes_per_megapixel": 159596.44317626953,
+          "smape_full": 0.09968749584626006,
+          "smape_hole": 0.0276065363050126,
+          "smape_shaded": 0.10873247962158718,
+          "psnr_full_db": 29.200386475233124
+        },
+        {
+          "fraction": 0.2,
+          "atoms": 13107,
+          "bytes": 229398,
+          "bytes_per_megapixel": 218770.98083496094,
+          "smape_full": 0.0898594876772178,
+          "smape_hole": 0.027515692618731418,
+          "smape_shaded": 0.09768261625909586,
+          "psnr_full_db": 29.892369784439143
+        }
+      ],
+      "shipped": {
+        "fraction": 0.0926,
+        "atoms": 6069,
+        "bytes": 142037,
+        "bytes_per_megapixel": 135457.03887939453,
+        "smape_full": 0.10451567385079685,
+        "smape_hole": 0.02767902570366118,
+        "smape_shaded": 0.11415741891446604,
+        "psnr_full_db": 28.820087807211763
+      }
+    }
+  ]
+}
