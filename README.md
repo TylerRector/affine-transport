@@ -66,22 +66,9 @@ src/bench.py             runs both scenes, writes results/ and the individual PN
 src/figures.py           comparison panels and the rate-distortion chart
 src/raster.py            tone PNG and difference PNG writers
 spec/AffineTransport.lean  executable encoder spec, plain Lean 4
-spec/Invariants.lean       the two facts behind it, needs Mathlib
-tools/check_spec.py      runs the spec and the encoder and compares
-tools/decode_cost.py     decode wall-clock against the cost of tracing the frame
+spec/Invariants.lean      
 data/                    <scene>_shader_rgb_f32.npy, <scene>_oracle_rgb_f32.npy (not tracked)
 results/                 benchmark.json, rate_curve.csv
 figures/                 per-scene PNGs, comparison panels, rate-distortion chart
 ```
-
-## Reproduce
-
-```
-pip install -r requirements.txt
-make data KITCHEN_ARRAYS=/path/to/selected_arrays.npz
-make
-```
-
-The Cornell arrays come from Mitsuba's built-in box plus a dielectric sphere, 4096 spp at depth 12 for the oracle and 1024 spp at depth 3 for the shader, with the sphere's pixels zeroed since the base pass has no material for it. Rendering takes about 25 minutes on CPU; both encodes together take under 15 seconds. The kitchen arrays come from the supplied dump and are not regenerable here.
-
 `make spec` runs the specification and the cross-check. `spec/Invariants.lean` checks under Lean 4.30 with Mathlib and has no `sorry`.
