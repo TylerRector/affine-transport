@@ -24,18 +24,6 @@ Cornell is the harder scene and stalls higher. Its residual is chromatic. The fi
 
 For reference, the kitchen dump's own hybrid encoder reached 0.0321 using 1.20 MB; this pipeline reaches 0.0309 at 220 KB.
 
-## Cost
-
-Wall-clock on one CPU, Cornell frame at 1024², from `tools/decode_cost.py`.
-
-| step | time | vs tracing |
-|---|---|---|
-| path trace, 4096 spp at depth 12 | 668.6 s | 1× |
-| evaluate the payload | 69 ms | 9,600× |
-| decode as shipped, inpainting included | 1.50 s | 450× |
-
-The payload itself is a handful of operations per pixel. The gap between the two decode rows is the hole inpainting, which the decoder currently re-solves from scratch and which is 95% of its cost; a renderer that hands over its own second-hit radiance removes that term, and the original dump called the inpainting a proxy for exactly that buffer. Neither row counts the base shading pass being corrected. In deployment, that is the raster output you already have, and the Cornell numbers stand in for it with a cheap render.
-
 ## Charts
 
 ![model, oracle, difference for both scenes](figures/compare_both.png)
