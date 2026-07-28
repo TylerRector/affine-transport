@@ -32,7 +32,7 @@ For reference, the kitchen dump's own hybrid encoder reached 0.0321 using 1.20 M
 
 ## Spec
 
-`spec/AffineTransport.lean` is the encoder written out as an executable specification: every constant, every rounding rule, the tile addressing, and the byte accounting, in the order the encoder applies them. It exists so the pipeline can be rebuilt in another language without reading NumPy, so it is deliberately literal: `toFp16` is bit-exact against `numpy.float16`, `roundHalfEven` is `numpy.rint` rather than Lean's `Float.round`, and the hole fill is written as Jacobi iteration on the same linear system SciPy solves directly.
+`spec/AffineTransport.lean` is the encoder written out as an executable specification every constant, every rounding rule, the tile addressing, and the byte accounting, in the order the encoder applies them. It exists so the pipeline can be rebuilt in another language without reading NumPy, so it is deliberately literal. `toFp16` is bit-exact against `numpy.float16`, `roundHalfEven` is `numpy.rint` rather than Lean's `Float.round`, and the hole fill is written as Jacobi iteration on the same linear system SciPy solves directly.
 
 `spec/Invariants.lean` states over `ℝ` layers compose as a monoid under front-to-back stacking, and equal-cost atoms make the frame's Lagrangian separable. It is the only file that needs Mathlib.
 
